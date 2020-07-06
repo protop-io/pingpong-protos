@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package protop.pingpong;
+
+message Ping {}
+message Pong {}
+
+service PingPongService {
+  rpc Exchange(stream Ping) returns (stream Pong);
+}
